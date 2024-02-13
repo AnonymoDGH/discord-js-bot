@@ -1,6 +1,6 @@
 {
-    "name": "mongodb-atlas",
-    "type": "mongodb-atlas",
+    "name": "public",
+    "type": "nexus123",
     "config": {
         "clusterName": "AtlasCluster",
         "readPreference": "primary",
