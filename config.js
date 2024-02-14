@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "http://localhost:8080", // base url
-    failureURL: "http://localhost:8080", // failure redirect url
+    baseURL: "https://nexus-royl.onrender.com/", // base url
+    failureURL: "https://nexus-royl.onrender.com/", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
