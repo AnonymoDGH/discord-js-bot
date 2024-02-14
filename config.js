@@ -7,7 +7,7 @@ module.exports = {
   },
   INTERACTIONS: {
     SLASH: true, // Should the interactions be enabled
-    CONTEXT: false, // Should contexts be enabled
+    CONTEXT: true, // Should contexts be enabled
     GLOBAL: true, // Should the interactions be registered globally
     TEST_GUILD_ID: "1201663140551729173", // Guild ID where the interactions should be registered. [** Test you commands here first **]
   },
@@ -30,7 +30,7 @@ module.exports = {
   // PLUGINS
 
   AUTOMOD: {
-    ENABLED: false,
+    ENABLED: true,
     LOG_EMBED: "#36393F",
     DM_EMBED: "#36393F",
   },
