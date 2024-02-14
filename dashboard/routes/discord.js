@@ -17,7 +17,9 @@ router.get("/login", async function (req, res) {
       return res.redirect(
         `https://discordapp.com/api/oauth2/authorize?client_id=${
           req.client.user.id
-        }&scope=identifyguilds&response_type=code&redirect_uri=$nexus-royl.onrender.com + "/api/callback"&state=${req.query.state || "no"}`
+        }&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(
+          req.client.config.DASHBOARD.baseURL + "/api/callback"
+        )}&state=${req.query.state || "no"}`
       );
     }
     res.redirect("/selector");
@@ -32,14 +34,14 @@ router.get("/callback", async (req, res) => {
     if (!req.query.code) {
       req.client.logger.debug({ query: req.query, body: req.body });
       req.client.logger.error("Failed to login to dashboard! Check /logs folder for more details");
-      return res.redirect(req.client.config.DASHBOARD.failureURL);
+      return res.redirect('nexus-royl.onrender.com');
     }
 
     const redirectURL = req.client.states[req.query.state] || "/selector";
     const params = new URLSearchParams();
     params.set("grant_type", "authorization_code");
     params.set("code", req.query.code);
-    params.set("redirect_uri", `${req.client.config.DASHBOARD.baseURL}/api/callback`);
+    params.set("redirect_uri", `nexus-royl.onrender.com/api/callback`);
     const response = await fetch("https://discord.com/api/oauth2/token", {
       method: "POST",
       body: params.toString(),
