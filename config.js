@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "nexusai-ass.vercel.app", // base url
-    failureURL: "nexusai-ass.vercel.app", // failure redirect url
+    baseURL: "https://nexusai-ass.vercel.app", // base url
+    failureURL: "https://nexusai-ass.vercel.app", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
