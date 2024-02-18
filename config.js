@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "nexus-royl.onrender.com", // base url
-    failureURL: "nexus-royl.onrender.com", // failure redirect url
+    baseURL: "nexusai-ass.vercel.app", // base url
+    failureURL: "nexusai-ass.vercel.app", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
@@ -59,9 +59,9 @@ module.exports = {
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "localhost",
-        port: 2333,
-        password: "youshallnotpass",
+        host: "lavarc4.fypmoon.org",
+        port: 5638,
+        password: "shiorii",
         id: "Local Node",
         secure: false,
       },
